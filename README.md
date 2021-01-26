@@ -29,4 +29,4 @@ Task tracker application
 	 Удаление комментария.
 
 Database schema:
-[![Screen short](https://raw.github.com/javadev/task-tracker/main/task_tracker.png)](https://github.com/javadev/task-tracker/)
+[![Screen short](https://github.com/javadev/task-tracker/raw/main/task_tracker.png)](https://github.com/javadev/task-tracker/)
