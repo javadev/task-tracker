@@ -15,10 +15,10 @@ There is an external service that stores additional information about the user (
 Elements:
 
 Department.
-User (name, department id).
-Task. (Creation date, name, description, author, artist, status)
-Comments to the task (may be from different users).
-Attachments to the task (any files).
+- User (name, department id).
+- Task. (Creation date, name, description, author, artist, status)
+- Comments to the task (may be from different users).
+- Attachments to the task (any files).
 
 REST methods needed:
 
