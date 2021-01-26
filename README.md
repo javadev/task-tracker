@@ -1,32 +1,33 @@
 # task-tracker
 Task tracker application
 
-Сделать условный трекер задач.
+# The task
+Make a task tracker.
 
-Возможность строить отчеты,количество задач предполагаемое 100к+.
+Ability to build reports, the number of tasks is estimated 100k +.
 
-Использовать любые (Spring,Spring Boot...)? фреймворки,БД и т.д. на своё усмотрение.
+Use any (Spring, Spring Boot ...)? frameworks, databases, etc. at your discretion.
 
-Достаточно набросать абстрактную структуру приложения.
+It is enough to sketch the abstract structure of the application.
 
-Существует внешний сервис который хранит дополнительную информацию по пользователю (рейтинг к примеру 1..3).(к примеру REST)
+There is an external service that stores additional information about the user (rating for example 1..3). (For example REST)
 
-Элементы:
-	
- Подразделение.
-	 Пользователь (name,id подразделения).
-	 Таска.(дата создания,тема,описание,автор,исполнитель,статус)
-	 Комментарии к таске (могут быть от разных пользователей).
-	 Вложения к задаче (любые файлы).
+Elements:
 
-Нужны REST методы:
-	
- Получения списка задач (возможность фильтрации по подразделению+сортировка по дате создания).Должен возвращать полную информацию по подразделению,пользователю (включая рейтинг.Если сервис с доп.инфо недоступен-значение по умолчанию).
-	 Получение деталей конкретной задачи (комменты,вложения).
-	 Создание задачи.
-	 Изменения задачи (статус,исполнитель).
-	 Добавление комментария.
-	 Удаление комментария.
+Department.
+User (name, department id).
+Task. (Creation date, name, description, author, artist, status)
+Comments to the task (may be from different users).
+Attachments to the task (any files).
+
+REST methods needed:
+
+- Receiving a list of tasks (the ability to filter by department + sorting by date of creation). Should return full information by department, user (including rating. If service with additional information is not available, default value).
+- Getting details of a specific task (comments, attachments).
+- Create a task.
+- Task changes (status, executor).
+- Adding a comment.
+- Delete comment.
 
 Database schema:
 [![Screen short](https://github.com/javadev/task-tracker/raw/main/task_tracker.png)](https://github.com/javadev/task-tracker/)
