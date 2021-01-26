@@ -63,7 +63,7 @@ public class User{
 
     @ManyToMany(mappedBy = "users")
     @JsonManagedReference
-    private List<Department> departments = new ArrayList<>();
+    private List<Department> department = new ArrayList<>();
     
     public User() {}
 
@@ -122,11 +122,11 @@ public class User{
         this.roles = roles;
     }
 
-    public List<Department> getDepartments() {
-      return departments;
+    public List<Department> getDepartment() {
+      return department;
     }
 
-    public void setDepartment(List<Department> departments) {
-      this.departments = departments;
+    public void setDepartment(List<Department> department) {
+      this.department = department;
     }
 }

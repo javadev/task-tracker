@@ -1,28 +1,16 @@
-package com.github.tasktracker.backend.entities;
+package com.github.tasktracker.backend.dto;
 
 import java.util.List;
+import com.github.tasktracker.backend.entities.User;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
-@Entity
-public class Department {
+public class DepartmentDTO {
   
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
   private String name;
-  @ManyToMany
-  @JsonManagedReference
+  private String description;
   private List<User> users;
   private long admin;
-
+  
   public long getId() {
     return id;
   }
@@ -37,6 +25,14 @@ public class Department {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
   }
 
   public List<User> getUsers() {

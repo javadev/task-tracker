@@ -1,19 +1,19 @@
-package com.github.tasktracker.backend.entities;
+package com.github.tasktracker.backend.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
-public class TaskComment {
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+public class TaskCommentDTO {
   private long id;
   private long user;
   private long department;
   private long task;
   private String comment;
+
+  public long getDepartment() {
+    return department;
+  }
+
+  public void setDepartment(long department) {
+    this.department = department;
+  }
 
   public long getId() {
     return id;
@@ -29,14 +29,6 @@ public class TaskComment {
 
   public void setUser(long user) {
     this.user = user;
-  }
-
-  public long getDepartment() {
-    return department;
-  }
-
-  public void setDepartment(long department) {
-    this.department = department;
   }
 
   public long getTask() {
