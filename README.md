@@ -27,3 +27,6 @@ Task tracker application
 	 Изменения задачи (статус,исполнитель).
 	 Добавление комментария.
 	 Удаление комментария.
+
+Database schema:
+[![Screen short](https://raw.github.com/javadev/task-tracker/main/task_tracker.png)](https://github.com/javadev/task-tracker/)
