@@ -78,7 +78,7 @@ http://localhost:8001/createTask
 Origin: http://localhost:8000
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMiIsImlhdCI6MTYxMTczMzM2MCwiZXhwIjoxNjExODE5NzYwfQ.Y_jGdqwrg__KJyS6gCb0XFcp8meYUV0OrzNh_6CeIN72_OJ6kQWCBBwgkkqi31-r3P1-UKV4-OuDjCkhX-RwZg
 
-{"user":[1],"task":{"name":"Task1","startTime":"2021-01-27 09:45","endTime":"2021-02-03 09:45","description":"<p>Task1</p>","createdBy":1,"program":1,"modifiedBy":1,"status":"created","modifiedTime":"2021-01-27 09:45","createdTime":"2021-01-27 09:45"}}
+{"user":[1],"task":{"name":"Task1","startTime":"2021-01-27 09:45","endTime":"2021-02-03 09:45","description":"<p>Task1</p>","createdBy":1,"department":1,"modifiedBy":1,"status":"created","modifiedTime":"2021-01-27 09:45","createdTime":"2021-01-27 09:45"}}
 ```
 
 Add comment for task:
