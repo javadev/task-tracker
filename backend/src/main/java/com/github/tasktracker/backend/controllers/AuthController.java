@@ -26,6 +26,7 @@ import com.github.tasktracker.backend.message.response.JwtResponse;
 import com.github.tasktracker.backend.entities.Role;
 import com.github.tasktracker.backend.entities.RoleName;
 import com.github.tasktracker.backend.entities.User;
+import com.github.tasktracker.backend.services.RatingService;
 import com.github.tasktracker.backend.repositories.RoleRepository;
 import com.github.tasktracker.backend.repositories.UserRepository;
 import com.github.tasktracker.backend.security.jwt.JwtProvider;
@@ -52,6 +53,9 @@ public class AuthController {
 
     @Autowired
     JwtProvider jwtProvider;
+
+    @Autowired
+    RatingService ratingService;
 
     @PostMapping("/signin")
     @CrossOrigin(origins = clientUrl)
@@ -88,14 +92,16 @@ public class AuthController {
 
         if (signUpRequest.getUser().equalsIgnoreCase("U")) {
             Role userRole = roleRepository.findByName(RoleName.ROLE_USER)
-                    .orElseThrow(() -> new RuntimeException("Fail! -> Cause: User Role not find."));
+                    .orElseThrow(() -> new RuntimeException("Fail! -> Cause: User Role not found."));
             roles.add(userRole);
 
         } else if (signUpRequest.getUser().equalsIgnoreCase("A")) {
             Role adminRole = roleRepository.findByName(RoleName.ROLE_ADMIN)
-                    .orElseThrow(() -> new RuntimeException("Fail! -> Cause: User Role not find."));
+                    .orElseThrow(() -> new RuntimeException("Fail! -> Cause: User Role not found."));
             roles.add(adminRole);
         }
+
+        user.setRating(ratingService.requestRatingForUser(signUpRequest.getEmail()));
 
         user.setRoles(roles);
         userRepository.save(user);

@@ -55,6 +55,8 @@ public class User{
     @Size(min=6, max = 100)
     private String password;
 
+    private Integer rating;
+
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "user_roles", 
     	joinColumns = @JoinColumn(name = "user_id"), 
@@ -112,6 +114,14 @@ public class User{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Integer getRating() {
+        return rating;
+    }
+
+    public void setRating(Integer rating) {
+        this.rating = rating;
     }
 
     public Set<Role> getRoles() {
