@@ -17,7 +17,7 @@ public class TaskDTO {
   private LocalDateTime startTime;
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
   private LocalDateTime endTime;
-  private long modifiedBy;
+  private long assignedTo;
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
   private LocalDateTime modifiedTime;
   private String status;
@@ -53,8 +53,8 @@ public class TaskDTO {
     return endTime;
   }
 
-  public long getModifiedBy() {
-    return modifiedBy;
+  public long getAssignedTo() {
+    return assignedTo;
   }
 
   public LocalDateTime getModifiedTime() {
@@ -97,8 +97,8 @@ public class TaskDTO {
     this.endTime = endTime;
   }
 
-  public void setModifiedBy(long modifiedBy) {
-    this.modifiedBy = modifiedBy;
+  public void setAssignedTo(long assignedTo) {
+    this.assignedTo = assignedTo;
   }
 
   public void setModifiedTime(LocalDateTime modifiedTime) {
