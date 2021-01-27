@@ -1,5 +1,5 @@
 # task-tracker
-Task tracker application
+The Task tracker application
 
 # The task
 Make a task tracker.
@@ -14,7 +14,7 @@ There is an external service that stores additional information about the user (
 
 Elements:
 
-Department.
+- Department.
 - User (name, department id).
 - Task. (Creation date, name, description, author, artist, status)
 - Comments to the task (may be from different users).
@@ -85,7 +85,7 @@ Add comment for task:
 
 ```
 POST
-http://localhost:8001/addTaskComment/1/1/1
+http://localhost:8001/addTaskComment/1/1/6
 
 Origin: http://localhost:8000
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMiIsImlhdCI6MTYxMTczMzM2MCwiZXhwIjoxNjExODE5NzYwfQ.Y_jGdqwrg__KJyS6gCb0XFcp8meYUV0OrzNh_6CeIN72_OJ6kQWCBBwgkkqi31-r3P1-UKV4-OuDjCkhX-RwZg
