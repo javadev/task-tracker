@@ -48,7 +48,12 @@ User login:
 ```
 POST
 http://localhost:8001/auth/signin
+{"username":"user2","password":"ctt252ctlo"}
+```
 
+Response:
+
+```
 {"username":"user2","uid":1,"authorities":[{"authority":"ROLE_USER"}],"id":1,"tokenType":"Bearer","accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMiIsImlhdCI6MTYxMTczNDE4MiwiZXhwIjoxNjExODIwNTgyfQ.oPe3MOvi3AXgh8o76At9q4rl-INBwmim8wWoCoTZkY8s0krzuFiKtly6i94cfeHt3KUF_x6eoZszMy-ub2cnrQ"}
 ```
 
@@ -76,7 +81,7 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMiIsImlhdCI6MTYxMTczM
 {"user":[1],"task":{"name":"Task1","startTime":"2021-01-27 09:45","endTime":"2021-02-03 09:45","description":"<p>Task1</p>","createdBy":1,"program":1,"modifiedBy":1,"status":"created","modifiedTime":"2021-01-27 09:45","createdTime":"2021-01-27 09:45"}}
 ```
 
-Add comment for task
+Add comment for task:
 
 ```
 POST
