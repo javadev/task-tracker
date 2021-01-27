@@ -1,19 +1,17 @@
 package com.github.tasktracker.backend.services;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.github.tasktracker.backend.dto.CommentDTO;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.github.tasktracker.backend.dto.CommentDTO;
 import com.github.tasktracker.backend.entities.Task;
 import com.github.tasktracker.backend.entities.TaskComment;
 import com.github.tasktracker.backend.repositories.TaskCommentRepository;
 import com.github.tasktracker.backend.repositories.TaskRespository;
-import com.github.tasktracker.backend.resources.TaskListResource;
 import com.github.tasktracker.backend.resources.TaskCommentListResource;
+import com.github.tasktracker.backend.resources.TaskListResource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class TaskService {
